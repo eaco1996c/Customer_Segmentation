@@ -92,15 +92,31 @@ Scaled:
 
 ![image](https://user-images.githubusercontent.com/38795845/130334956-bcd6cf29-5140-4cf4-af55-34a05b5203cf.png)
 
+A model with **3 clusters** will be the best for KNN model.
+
 ### 3 cluster KNN result
+
+Append cluster # to every instance:
 
 ![image](https://user-images.githubusercontent.com/38795845/130334972-e1cd0926-f88f-42f3-b1df-156558ef205c.png)
 
+IQR Binning Values:
+Q1, medium, Q3
+
 ![image](https://user-images.githubusercontent.com/38795845/130334988-688316bb-1746-4c33-891b-c175eaafa9c8.png)
+
+- R: 'TotalLastMonth' Distribution among clusters:
 
 
 ![image](https://user-images.githubusercontent.com/38795845/130334994-7771ad8a-3d25-4690-a38a-84d741f606b1.png)
+
+- M: 'TotalTenure' Distribution among clusters:
+
+
 ![image](https://user-images.githubusercontent.com/38795845/130335001-750f8449-dc70-4ed7-82aa-0f9982aca429.png)
+
+- F: 'CardItemsMonthly' Distribution among clusters:
+
 ![image](https://user-images.githubusercontent.com/38795845/130335004-82b3a6c3-f924-4bce-9acf-8bb9356fc6ec.png)
 
 ### Cluster Output
@@ -126,4 +142,33 @@ Cluster 2 is the most important cluster to analyze and then cluster 3. Cluster 1
 Plot the boxplots of features of three clusters to see if there are important triggers for high consuming crowd. Outliers are not displayed because we are focusing on the general difference.
 
 
+![image](https://user-images.githubusercontent.com/38795845/130335442-09a703bf-6812-4b82-b9a1-816c105375be.png)
 
+## Analysis
+
+- From the boxplots above, following features do not distinct between 3 clusters:
+Region, TownSize, Gender, UnionMember, Retired, DebtToIncomeRatio, MaritalStatus, HouseholdSize, NumberPets, NumberCats, NumberBirds, HomeOwner, CarsOwned, CommuteTime, PoliticalPartyMem, Votes, ActiveLifestyle, EquipmentRental, CallerID, CallWait, CallForward, ThreeWayCalling, EBilling, TVWatchingHours, OwnsMobileDevice, OwnsGameSystem.
+
+- Following are features significantly differring:
+   
+   Cluster 2 have more and cluster 1&3 have none or less: OwnsFax, NewsSubscriber, OwnsPC, Pager, VM, Multiline, WirelessData, CallingCard, EquipmentLastMonth, VoiceLastMonth, PhoneCoTenure, CarValue, NumberDogs, CreditDebt, OtherDebit, HHIncome, EmploymentLength, EducationYears, Age.
+
+   Cluster 2 have less than other clusters: HouseholdSize
+
+- Significant Difference between Cluster 1&3:
+Cluster 1 has True LoanDefault while cluster 3 does not has.
+
+- Category features analysis:
+All JobCategory and CarOwnership and CarBrand features have similar distribution among three clusters. Despite the 'JobCategory_Sales', cluster 2 has most False value, while other 2 clusters has more cases with a sales job.
+
+![image](https://user-images.githubusercontent.com/38795845/130335454-df24cb96-6471-4b83-8315-a637b3f1b748.png)
+
+## Conclusion & Business Suggestion
+
+From the cluster description analysis, it is clear that customers with more added service than calling are the ones willing to spend. They tend to use wireless data, buy more expensive cars, have more dogs. They generally have higher household income as well as get educated for more years (which means normally higher education) and tend to held debit. Cluster 2 customers are older in Age and stay with the the telecom company for the longest. 
+
+For cluster 2, the company could develop and marketing more new services to them. 
+
+For cluster 3, the company could offer them discounts to attract them to add new services like wireless data. Through the trial, they are possibly going to stay with new services. 
+
+For cluster 1, due to they are facing pressure of Loan. They are the least possible to add services to monthly plans. They should be put at the retention group with no further aggressive marketing. 
