@@ -4,11 +4,11 @@
 This project aims to establish a customers segmentation for telecom consumption. The
 target is to divide them into 3 stages of different “maintaining value”, high-value
 customers, medium-value customers and lower-value customers with the
-RMF(Recency, Monetary and frequency) evaluation. Based on the "maintaining value", analysis on clusters is applied to profile high value customers in order to establish consumption attracting business methods.
+RFM(Recency, Frequency and Monetary value) evaluation. Based on the "maintaining value", analysis on clusters is applied to profile high value customers in order to establish consumption attracting business methods.
 
 **Project Framework**
 
-![image](https://user-images.githubusercontent.com/38795845/130502563-a219f1bf-f5af-4352-9f25-1dbe29662553.png)
+![image](https://user-images.githubusercontent.com/38795845/130512127-8806c4ce-cde2-427e-8cb6-0b2786eda649.png)
 
 
 
@@ -24,12 +24,12 @@ There are 5000 rows and 59 columns in the customer dataframe. Because the number
 Check is held towards the unique id, there is no duplicates in this dataset.
 - Null Check:
 
-There are nulls in columns 'Gender' of 33 nulls, 'JobCategory' of 15 nulls, 'HouseholdSize' of 8, 'NumberPets' of 6, 'NumberCats' of 7, 'NumberDogs' of 8, 'NumberBirds' of 34, 'HomeOwner' of 13. The counts of nulls are small compared to the total 5000 cases. And for building clusters through RMF model, we are not using these features. So nulls are not going to be dropped in this project. 
+There are nulls in columns 'Gender' of 33 nulls, 'JobCategory' of 15 nulls, 'HouseholdSize' of 8, 'NumberPets' of 6, 'NumberCats' of 7, 'NumberDogs' of 8, 'NumberBirds' of 34, 'HomeOwner' of 13. The counts of nulls are small compared to the total 5000 cases. And for building clusters through RFM model, we are not using these features. So nulls are not going to be dropped in this project. 
 
 
 ## Methodology
 
-1. RMF evaluation
+1. RFM evaluation
 2. K-mean Clusters.
 The RFM model is mostly used in known target data sets and it has certain
 limitations. This project will use a widely applicable K-Means clustering, which
@@ -70,7 +70,7 @@ The RFM model is mostly used in known target data sets and it has certain
 limitations. This project will use a widely applicable K-Means clustering, which
 belongs to unsupervised machine learning.
 Because the K-Means algorithm is very simple and could be well generated with the
-RMF model. For a given sample set, divide the sample set into K clusters according
+RFM model. For a given sample set, divide the sample set into K clusters according
 to the distance between the samples, so that the points in the clusters are connected as
 closely as possible, and the distance between the clusters is as large as possible.
 Also, our main variables are all numerical, and we have an expected judgment on the
