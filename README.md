@@ -6,6 +6,12 @@ target is to divide them into 3 stages of different “maintaining value”, hig
 customers, medium-value customers and lower-value customers with the
 RMF(Recency, Monetary and frequency) evaluation. Based on the "maintaining value", analysis on clusters is applied to profile high value customers in order to establish consumption attracting business methods.
 
+**Project Framework**
+
+![image](https://user-images.githubusercontent.com/38795845/130502563-a219f1bf-f5af-4352-9f25-1dbe29662553.png)
+
+
+
 ## Data Description
 
 There are 5000 rows and 59 columns in the customer dataframe. Because the number of features is large, Pandas_Profiling is introduced to plot the description about all features. The columns include a unique id 'CustomerID' and no target feature. 41 features of type "Object". Therefore we are going to build an **unsupervised clustering model**.
