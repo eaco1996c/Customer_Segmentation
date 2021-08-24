@@ -85,7 +85,7 @@ majority and still important to maintain, with less priority.
 3. Low-value customers: who consume less service. They could be maintained
 with least focus, because the revenue of maintaining is relatively low.
 
-### Data preprocessing for KNN
+### Data preprocessing for K-Means
 
 ![image](https://user-images.githubusercontent.com/38795845/130334926-1347305e-1b81-4bec-8b5c-d4e49d6554c4.png)![image](https://user-images.githubusercontent.com/38795845/130334943-0bf18d44-444a-4f15-94aa-bf921b0b2cb0.png)
 
@@ -94,13 +94,13 @@ Scaled:
 
 ![image](https://user-images.githubusercontent.com/38795845/130334949-3fca5bf0-843a-40c2-8222-510e81444aef.png)
 
-### Search for the best # of Clusters of the KNN model throguh Silhouette Score
+### Search for the best # of Clusters of the K-Means model throguh Silhouette Score
 
 ![image](https://user-images.githubusercontent.com/38795845/130334956-bcd6cf29-5140-4cf4-af55-34a05b5203cf.png)
 
-A model with **3 clusters** will be the best for KNN model.
+A model with **3 clusters** will be the best for K-Means model.
 
-### 3 cluster KNN result
+### 3 cluster K-Means result
 
 Append cluster # to every instance:
 
